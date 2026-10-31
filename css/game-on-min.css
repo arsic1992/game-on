@@ -156,3 +156,68 @@ div.forabg.go-cat{margin:0 0 24px;padding:0;background:none;border:0}
   .go-cat li.row dl.go-forum-row[style*="unread"]::before{animation:none}
   .go-cat li.row,.go-cat li.row::before,ul.linklist.go-quicklinks li a{transition:none}
 }
+
+/* ===== 6. INDEX_BODY: TIME BAR ===== */
+.go-timebar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 14px}
+.go-timebar p{float:none;margin:0;padding:6px 12px;font-size:.78rem;line-height:1.3;color:var(--go-muted);background:var(--go-surface);border:1px solid var(--go-border);border-radius:8px 2px 8px 2px}
+.go-timebar p.go-lastvisit{order:2;margin-left:auto}
+
+/* ===== 7. INDEX_BODY: PANELS (login forms, announcement) ===== */
+div.panel.go-panel{margin:0 0 18px;padding:0;background:none;border:0}
+.go-panel .inner{margin:0;padding:14px 18px;background:var(--go-surface);border:1px solid var(--go-border);border-radius:var(--go-radius);box-shadow:var(--go-shadow)}
+.go-panel .corners-top,.go-panel .corners-bottom{display:none}
+.go-login-form{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 14px;margin:0;padding:0;text-align:center}
+.go-login-form label{display:inline-flex;align-items:center;gap:8px;font-size:.84rem;color:var(--go-muted)}
+.go-login-form input.post{width:150px;padding:8px 10px;box-sizing:border-box;font:inherit;color:var(--go-text);background:var(--go-surface-2);border:1px solid var(--go-border);border-radius:8px 2px 8px 2px;transition:border-color .2s,box-shadow .2s}
+.go-login-form input.post:focus{outline:0;border-color:var(--go-accent);box-shadow:0 0 0 3px var(--go-glow)}
+.go-login-form input.radio{width:18px;height:18px;margin:0;accent-color:var(--go-accent)}
+.go-login-form input.button1{padding:9px 22px;font:700 .95rem/1 var(--go-font-head);letter-spacing:.06em;color:#fff;cursor:pointer;background:linear-gradient(135deg,var(--go-accent),var(--go-accent-2));border:0;border-radius:10px 2px 10px 2px;transition:box-shadow .2s,transform .2s}
+.go-login-form input.button1:hover,.go-login-form input.button1:focus-visible{outline:0;box-shadow:0 0 16px var(--go-glow);transform:translateY(-1px)}
+.go-login-form .social_btn{flex:1 1 100%;display:flex;justify-content:center;gap:10px}
+.go-intro{--go-tglyph:"\1F4E2"}
+.go-intro .inner{border-left:4px solid var(--go-accent)}
+.go-intro div.h3.go-title{margin:0 0 10px;padding:0 0 10px;background:none}
+.go-intro .mes-txt{font-size:.9rem;line-height:1.55;color:var(--go-text)}
+
+/* ===== 8. INDEX_BODY: BOX HEADINGS ===== */
+div.h3.go-title{display:flex;align-items:center;gap:10px;margin:0;padding:12px 16px;font:700 1.1rem/1.2 var(--go-font-head);letter-spacing:.06em;text-transform:none;color:var(--go-text);background:var(--go-surface-2);border:0;border-bottom:1px solid var(--go-border)}
+div.h3.go-title a{color:inherit;text-decoration:none}
+div.h3.go-title a:hover{color:var(--go-accent)}
+div.h3.go-title::before{content:var(--go-tglyph,"\25C6");flex:0 0 28px;height:28px;display:flex;align-items:center;justify-content:center;box-sizing:border-box;font-size:.9rem;line-height:1;color:var(--go-accent);background:var(--go-surface);border:2px solid var(--go-accent);border-radius:8px 2px 8px 2px}
+
+/* ===== 9. INDEX_BODY: WHO IS ONLINE / STATISTICS / CHAT BOXES ===== */
+.go-boxes{display:flex;flex-wrap:wrap;align-items:stretch;gap:18px;margin:0 0 18px}
+.go-boxes>br,.go-boxes .clear,.go-boxes .img-whois{display:none}
+.go-box{flex:1 1 300px;min-width:0;background:var(--go-surface);border:1px solid var(--go-border);border-radius:var(--go-radius);box-shadow:var(--go-shadow);overflow:hidden}
+.go-box-online{flex:2 1 460px;--go-tglyph:"\25CF"}
+.go-box-online div.h3.go-title::before{color:var(--go-new);border-color:var(--go-new)}
+.go-box-stats{--go-tglyph:"\1F4CA"}
+.go-box-chat{margin:0 0 18px;--go-tglyph:"\1F4AC"}
+.go-chat-body{padding:12px 16px;font-size:.84rem;line-height:1.5;color:var(--go-muted)}
+
+.go-online-body{display:flex;flex-direction:column;gap:10px;margin:0;padding:14px 16px;font-size:.84rem;line-height:1.5;color:var(--go-muted)}
+.go-online-body>br,.go-online-users br,.go-online-total br,.go-online-record br,.go-online-birthdays br:last-child{display:none}
+.go-online-total{color:var(--go-text)}
+.go-online-total strong,.go-online-record strong{font-weight:800;color:var(--go-accent)}
+.go-online-users a,.go-online-legend a,.go-stat a{display:inline-flex;align-items:center;gap:4px;margin:2px;padding:1px 10px;font-size:.8rem;line-height:1.5;text-decoration:none;background:#f3f5fc;border:1px solid var(--go-border);border-radius:999px}
+.go-online-birthdays{display:block;padding:8px 12px;background:var(--go-surface-2);border:1px dashed var(--go-border);border-radius:10px 2px 10px 2px}
+.go-online-legend{display:flex;flex-wrap:wrap;gap:6px;font-size:0;font-style:normal}
+
+.go-stat{position:relative;margin:0;padding:11px 16px 11px 54px;font-size:.84rem;line-height:1.5;color:var(--go-muted);border-bottom:1px solid var(--go-border)}
+.go-stat:last-child{border-bottom:0}
+.go-stat::before{content:var(--go-sglyph);position:absolute;left:16px;top:50%;width:26px;height:26px;margin-top:-13px;display:flex;align-items:center;justify-content:center;box-sizing:border-box;font-size:.85rem;background:var(--go-surface-2);border:1px solid var(--go-border);border-radius:8px 2px 8px 2px}
+.go-stat-posts{--go-sglyph:"\1F4DD"}
+.go-stat-users{--go-sglyph:"\1F465"}
+.go-stat-newest{--go-sglyph:"\1F31F"}
+.go-stat strong{font:800 1.15rem/1 var(--go-font-head);color:var(--go-accent)}
+.go-stat-newest strong{font:inherit;font-weight:700;color:inherit}
+
+/* ===== 10. INDEX_BODY: LEGEND (new / no new / locked) ===== */
+#picture_legend{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 22px;margin:18px 0;padding:0;list-style:none}
+#picture_legend li{display:inline-flex;align-items:center;gap:8px;margin:0;padding:0;font-size:.8rem;color:var(--go-muted)}
+#picture_legend li img{display:none}
+#picture_legend li::before{content:var(--lg-glyph,"\1F3AE");width:30px;height:30px;display:flex;align-items:center;justify-content:center;box-sizing:border-box;font-size:1rem;line-height:1;background:var(--go-surface-2);border:2px solid var(--lg-ind,var(--go-muted));border-radius:10px 3px 10px 3px;opacity:var(--lg-op,1)}
+#picture_legend li.go-legend-new{--lg-ind:var(--go-accent);--lg-op:1}
+#picture_legend li.go-legend-new::before{box-shadow:0 0 0 3px var(--go-glow)}
+#picture_legend li.go-legend-read{--lg-ind:var(--go-muted);--lg-op:.6}
+#picture_legend li.go-legend-locked{--lg-ind:var(--go-danger);--lg-glyph:"\1F512";--lg-op:.9}
