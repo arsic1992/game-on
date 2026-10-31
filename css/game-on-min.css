@@ -677,3 +677,6 @@ body#phpbb{background:var(--go-bg)!important;color:var(--go-text)}
 #search_menu a{display:inline-flex;align-items:center;gap:6px;color:var(--go-accent);text-decoration:none}
 #search_menu a img{display:none}
 @media (max-width:760px){#search_menu{left:0!important;transform:none}}
+
+/* ===== 27. THEME SWITCH TRANSITION ===== */
+html.go-theme-switching *,html.go-theme-switching *::before,html.go-theme-switching *::after{transition:background-color .3s,color .3s,border-color .3s,box-shadow .3s!important}
