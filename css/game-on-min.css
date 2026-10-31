@@ -72,7 +72,7 @@ ul.linklist.go-quicklinks li a{display:inline-block;padding:8px 14px;font:700 .8
 ul.linklist.go-quicklinks li a:hover,ul.linklist.go-quicklinks li a:focus-visible{color:#fff;background:linear-gradient(135deg,var(--go-accent),var(--go-accent-2));border-color:transparent;box-shadow:0 0 14px var(--go-glow);outline:0}
 
 /* ===== 3. INDEX_BOX: CATEGORY CARD ===== */
-div.forabg.go-cat{margin:0 0 24px;padding:0;background:none;border:0}
+div.forabg.go-cat,div.forumbg.go-cat{margin:0 0 24px;padding:0;background:none;border:0}
 .go-cat .inner{margin:0;padding:0;background:var(--go-surface);border:1px solid var(--go-border);border-radius:var(--go-radius);box-shadow:var(--go-shadow);overflow:hidden}
 .go-cat .corners-top,.go-cat .corners-bottom{display:none}
 .go-cat ul.topiclist{margin:0;padding:0;list-style:none;background:none;border:0}
@@ -136,9 +136,9 @@ div.forabg.go-cat{margin:0 0 24px;padding:0;background:none;border:0}
 .go-cat a.last-post-icon img{display:none}
 .go-cat a.last-post-icon::before{content:"\25B6";font-size:.55rem;line-height:1;padding-left:1px}
 .go-cat a.last-post-icon:hover{transform:scale(1.15);box-shadow:0 0 10px var(--go-glow)}
-.go-cat dd.go-col-last:not(:has(.go-last-title:not(:empty))){justify-content:center;border-style:dashed}
-.go-cat dd.go-col-last:not(:has(.go-last-title:not(:empty)))::after{content:"\2014";color:var(--go-muted)}
-.go-cat dd.go-col-last:not(:has(.go-last-title:not(:empty))) .go-last-info{display:none}
+.go-cat ul.go-forums dd.go-col-last:not(:has(.go-last-title:not(:empty))){justify-content:center;border-style:dashed}
+.go-cat ul.go-forums dd.go-col-last:not(:has(.go-last-title:not(:empty)))::after{content:"\2014";color:var(--go-muted)}
+.go-cat ul.go-forums dd.go-col-last:not(:has(.go-last-title:not(:empty))) .go-last-info{display:none}
 
 /* stats: topics and posts */
 .go-cat dd.go-col-stat{order:3;flex:0 0 76px;display:flex;flex-direction:column;align-items:center;justify-content:center;float:none;width:auto;margin:0;padding:9px 4px;box-sizing:border-box;border:1px solid var(--go-border);border-radius:10px 2px 10px 2px;background:var(--go-surface-2);font:800 1.35rem/1 var(--go-font-head);color:var(--go-accent);text-align:center}
@@ -221,3 +221,70 @@ div.h3.go-title::before{content:var(--go-tglyph,"\25C6");flex:0 0 28px;height:28
 #picture_legend li.go-legend-new::before{box-shadow:0 0 0 3px var(--go-glow)}
 #picture_legend li.go-legend-read{--lg-ind:var(--go-muted);--lg-op:.6}
 #picture_legend li.go-legend-locked{--lg-ind:var(--go-danger);--lg-glyph:"\1F512";--lg-op:.9}
+
+/* ===== 11. TOPICS_LIST_BOX: BANNERS ===== */
+div.forumbg.announcement.go-cat ul.topiclist li.header{background:linear-gradient(100deg,#9d174d,#db2777 65%,#f59e0b)}
+.go-cat.announcement .go-cat-title::before{content:"\1F4E2";padding-left:0;font-size:.8rem}
+.go-cat li.header dt.go-cat-name{display:flex;align-items:center;gap:12px;float:none;flex:1;width:auto;margin:0;padding:0;border:0;background:none;color:#fff}
+.go-cat li.row.row2:not(:hover){background:rgba(120,130,170,.05)}
+
+/* ===== 12. TOPICS_LIST_BOX: TOPIC ROW ===== */
+.go-topics li.go-topic dl.go-topic-row{position:relative;display:flex;align-items:center;gap:14px;min-height:0;margin:0;padding:12px 18px 12px 80px;border:0;background:none!important}
+.go-topic-row{--go-ind:var(--go-muted);--go-glyph:"\1F4AC";--go-op:.6;--go-ring:transparent}
+.announcement .go-topic-row{--go-glyph:"\1F4E2"}
+.go-topic-row[style*="sticky_"]{--go-glyph:"\1F4CC"}
+.go-topic-row[style*="announce_"]{--go-glyph:"\1F4E2"}
+.go-topic-row[style*="_hot"]{--go-glyph:"\1F525"}
+.go-topic-row[style*="_moved"]{--go-glyph:"\21AA"}
+.go-topic-row[style*="unread"]{--go-ind:var(--go-accent);--go-op:1;--go-ring:var(--go-glow)}
+.go-topic-row[style*="_locked"]{--go-ind:var(--go-danger);--go-glyph:"\1F512";--go-op:.9}
+.go-topics li.go-topic dl.go-topic-row::before{content:var(--go-glyph);position:absolute;left:20px;top:50%;width:44px;height:44px;margin-top:-22px;display:flex;align-items:center;justify-content:center;box-sizing:border-box;font-size:1.3rem;line-height:1;background:var(--go-surface-2);border:2px solid var(--go-ind);border-radius:12px 4px 12px 4px;opacity:var(--go-op);box-shadow:0 0 0 3px var(--go-ring)}
+.go-topics li.go-topic dl.go-topic-row::after{content:none}
+.go-topics li.go-topic dl.go-topic-row[style*="unread"]::before{animation:go-pulse 2s ease-in-out infinite}
+.go-topics li.go-topic dl.go-topic-row[style*="unread"]::after{content:"";position:absolute;left:56px;top:50%;width:12px;height:12px;margin-top:-27px;box-sizing:border-box;border-radius:50%;background:var(--go-new);border:2px solid var(--go-surface);box-shadow:0 0 8px var(--go-new)}
+
+/* title column: type badge, title, description, pagination, author */
+.go-topics dd.go-col-title{order:1;flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:4px;float:none;width:auto;margin:0;padding:0;border:0;background:none}
+.go-topics dd.go-col-title>br{display:none}
+.go-title-line{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;min-width:0}
+.go-title-line>strong{padding:1px 10px;font-size:.72rem;line-height:1.5;font-weight:700;color:var(--go-accent);background:var(--go-surface-2);border:1px solid var(--go-border);border-radius:999px}
+.announcement .go-title-line>strong{color:#fff;background:#db2777;border-color:#db2777}
+.go-title-line>img{width:0;height:0;padding:5px;box-sizing:content-box;border-radius:50%;background:var(--go-accent-2);box-shadow:0 0 0 2px var(--go-surface),0 0 8px var(--go-glow)}
+.go-topics .go-title-line>a:has(>img){display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:6px 2px 6px 2px;background:var(--go-new);color:#04140a;text-decoration:none}
+.go-topics .go-title-line>a:has(>img) img{display:none}
+.go-topics .go-title-line>a:has(>img)::before{content:"\25B6";font-size:.55rem;line-height:1;padding-left:1px}
+.go-topics .topic-title-container{flex:0 1 auto;min-width:0;margin:0;padding:0}
+.go-topics h2.topic-title{margin:0;padding:0;border:0;font:inherit;text-transform:none}
+.go-topics a.topictitle{font:700 1.15rem/1.25 var(--go-font-head);letter-spacing:.03em;color:var(--go-text);text-decoration:none;overflow-wrap:anywhere}
+.go-topics a.topictitle:hover{color:var(--go-accent)}
+.go-topic-desc{font-size:.82rem;line-height:1.4;color:var(--go-muted)}
+.go-topic-meta{display:flex;flex-wrap:wrap;align-items:center;gap:2px 12px;font-size:.76rem;line-height:1.5;color:var(--go-muted)}
+.go-topic-meta .span-tab{margin:0;padding:0}
+
+/* readable author names on any theme, last post pill */
+.go-cat .go-last-info a:has(.usr_grp_clr),.go-topics .go-topic-meta a:has(.usr_grp_clr){display:inline-block;padding:0 9px;line-height:1.5;text-decoration:none;background:#f3f5fc;border:1px solid var(--go-border);border-radius:999px}
+.go-cat .go-last-info a:has(>img.sprite-icon_topic_latest){display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;margin-left:4px;vertical-align:middle;border-radius:6px 2px 6px 2px;background:linear-gradient(135deg,var(--go-accent),var(--go-accent-2));color:#fff;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.go-cat .go-last-info a:has(>img.sprite-icon_topic_latest) img{display:none}
+.go-cat .go-last-info a:has(>img.sprite-icon_topic_latest)::before{content:"\25B6";font-size:.55rem;line-height:1;padding-left:1px}
+.go-cat .go-last-info a:has(>img.sprite-icon_topic_latest):hover{transform:scale(1.15);box-shadow:0 0 10px var(--go-glow)}
+.go-cat .go-last-info dfn{display:none}
+.go-cat .go-last-body{flex:1 1 0;min-width:0;float:none!important}
+
+/* stats order on desktop: replies, then views */
+@media (min-width:821px){
+  .go-topics dd.posts.go-col-stat{order:3;color:var(--go-accent)}
+  .go-topics dd.views.go-col-stat{order:4;color:var(--go-accent-2)}
+}
+
+/* no topics */
+.go-cat li.row.go-empty dl{margin:0;padding:22px 16px;text-align:center;color:var(--go-muted)}
+.go-cat li.row.go-empty dt{float:none;width:auto;margin:0;padding:0}
+
+/* ===== 13. TOPICS_LIST_BOX: RESPONSIVE / MOTION ===== */
+@media (max-width:820px){
+  .go-topics li.go-topic dl.go-topic-row{flex-wrap:wrap;padding:12px 14px 12px 78px}
+  .go-topics dd.go-col-title{flex:1 1 100%;order:1}
+}
+@media (prefers-reduced-motion:reduce){
+  .go-topics li.go-topic dl.go-topic-row[style*="unread"]::before{animation:none}
+}
