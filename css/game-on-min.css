@@ -631,7 +631,7 @@ body#phpbb{background:var(--go-bg)!important;color:var(--go-text)}
 #wrap{background:transparent!important;border-color:transparent!important;box-shadow:none!important}
 
 /* ===== 25. TOP BAR: theme switch (left) + navigation (centre) ===== */
-.go-topbar{position:sticky;top:0;z-index:900;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;margin:0 0 12px;padding:8px 18px;background:color-mix(in srgb,var(--go-surface) 90%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--go-border);box-shadow:var(--go-shadow)}
+.go-topbar{position:sticky;top:0;z-index:900;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;margin:0;padding:8px 18px;background:color-mix(in srgb,var(--go-surface) 90%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--go-border);box-shadow:var(--go-shadow)}
 .go-topbar::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:linear-gradient(90deg,var(--go-head-from),var(--go-head-to) 50%,var(--go-accent-2))}
 .go-theme-toggle{grid-column:1;justify-self:start;display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;margin:0;padding:0;color:var(--go-accent);cursor:pointer;background:var(--go-surface-2);border:1px solid var(--go-border);border-radius:12px 3px 12px 3px;transition:color .2s,background .2s,border-color .2s,box-shadow .2s}
 .go-theme-toggle::before{content:"";width:20px;height:20px;background:currentColor;-webkit-mask:var(--ic-moon) center/contain no-repeat;mask:var(--ic-moon) center/contain no-repeat;transition:transform .35s}
@@ -1044,3 +1044,12 @@ h1.page-title.go-mcp-heading::before{content:"";flex:0 0 24px;width:24px;height:
 #cp-main p.right-box.go-selectall a{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:0 20px;box-sizing:border-box;font:700 .9rem/1 var(--go-font-head)!important;letter-spacing:.05em;color:var(--go-text)!important;text-decoration:none!important;white-space:nowrap;background:var(--go-surface)!important;background-image:none!important;border:1px solid var(--go-border)!important;border-radius:10px 2px 10px 2px;transition:color .2s,background .2s,border-color .2s}
 #cp-main p.right-box.go-selectall a::before,#cp-main p.right-box.go-selectall a::after{content:none!important}
 #cp-main p.right-box.go-selectall a:hover{color:var(--go-on-accent)!important;background:var(--go-accent)!important;border-color:var(--go-accent)!important}
+
+/* ===== 36. HERO: the admin-panel header picture, full width under the top bar (search bar hidden) ===== */
+#page-header.go-hero{position:relative;width:100%!important;max-width:none!important;height:435px;margin:0!important;padding:0!important;overflow:hidden;background:none!important;border:0!important}
+#page-header.go-hero .headerbar,#page-header.go-hero .headerbar .inner,#page-header.go-hero #logo-desc{float:none!important;width:100%!important;height:100%;margin:0!important;padding:0!important;background:none!important;border:0!important;border-radius:0!important}
+#page-header.go-hero .corners-top,#page-header.go-hero .corners-bottom{display:none!important}
+#page-header.go-hero a#logo{display:block!important;float:none!important;width:100%!important;height:100%!important;margin:0!important;padding:0!important}
+#page-header.go-hero a#logo img{display:block;width:100%!important;height:100%!important;max-width:none!important;object-fit:cover;object-position:center}
+#page-header.go-hero div.navbar{display:none!important}
+@media (max-width:760px){#page-header.go-hero{height:260px}}
