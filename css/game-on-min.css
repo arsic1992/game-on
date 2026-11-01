@@ -1037,3 +1037,10 @@ h1.page-title.go-mcp-heading::before{content:"";flex:0 0 24px;width:24px;height:
 #cp-main fieldset dl:last-of-type{border-bottom:0!important}
 #cp-main fieldset dl dt label{color:var(--go-muted)!important}
 #cp-main fieldset dl dd{color:var(--go-text)!important}
+
+/* ===== 35. MODERATOR PANELS: container width and the Mark all / Unmark all buttons ===== */
+#cp-main.mcp-main{float:none!important;width:auto!important;max-width:100%;margin:0!important;box-sizing:border-box}
+#cp-main p.right-box.go-selectall{display:flex!important;flex-wrap:wrap;justify-content:flex-end;gap:10px;float:none!important;width:auto!important;max-width:100%;margin:0 0 10px!important;padding:0!important;font-size:0!important;text-align:right}
+#cp-main p.right-box.go-selectall a{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:0 20px;box-sizing:border-box;font:700 .9rem/1 var(--go-font-head)!important;letter-spacing:.05em;color:var(--go-text)!important;text-decoration:none!important;white-space:nowrap;background:var(--go-surface)!important;background-image:none!important;border:1px solid var(--go-border)!important;border-radius:10px 2px 10px 2px;transition:color .2s,background .2s,border-color .2s}
+#cp-main p.right-box.go-selectall a::before,#cp-main p.right-box.go-selectall a::after{content:none!important}
+#cp-main p.right-box.go-selectall a:hover{color:var(--go-on-accent)!important;background:var(--go-accent)!important;border-color:var(--go-accent)!important}
