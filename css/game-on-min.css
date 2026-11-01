@@ -923,3 +923,95 @@ div.forumbg.go-members{margin:0 0 18px;padding:0;background:none;border:0}
 .go-members td.go-c-icon a[href*="privmsg"]{--ic:var(--ic-chat)}
 .go-members td.go-c-icon a[target="_blank"]{--ic:var(--ic-globe)}
 .go-members td.go-c-icon a:hover{color:var(--go-on-accent);background:var(--go-accent);border-color:var(--go-accent)}
+:root{
+  --ic-info:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27black%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Ccircle%20cx%3D%2712%27%20cy%3D%2712%27%20r%3D%2710%27%2F%3E%3Cline%20x1%3D%2712%27%20y1%3D%2716%27%20x2%3D%2712%27%20y2%3D%2712%27%2F%3E%3Cline%20x1%3D%2712%27%20y1%3D%278%27%20x2%3D%2712.01%27%20y2%3D%278%27%2F%3E%3C%2Fsvg%3E");
+}
+
+/* ===== 33. MODERATOR CONTROL PANEL (modcp_body, modcp_split, modcp_viewip) ===== */
+p.linkmcp.go-note{position:relative;margin:0 0 16px;padding:11px 16px 11px 48px;font-size:.88rem;line-height:1.5;color:var(--go-muted);background:var(--go-surface);border:1px solid var(--go-border);border-left:4px solid var(--go-accent);border-radius:0 12px 12px 0}
+p.linkmcp.go-note::before{content:"";position:absolute;left:18px;top:50%;width:20px;height:20px;margin-top:-10px;background:var(--go-accent);-webkit-mask:var(--ic-info) center/contain no-repeat;mask:var(--ic-info) center/contain no-repeat}
+div.panel.go-mcp{margin:0 0 18px;padding:0;background:none;border:0}
+.go-mcp>.inner{margin:0;padding:0;overflow:hidden;background:var(--go-surface);border:1px solid var(--go-border);border-radius:var(--go-radius);box-shadow:var(--go-shadow)}
+.go-mcp>.inner::before{content:"";display:block;height:4px;background:linear-gradient(90deg,var(--go-head-from),var(--go-head-to),var(--go-accent-2))}
+.go-mcp .corners-top,.go-mcp .corners-bottom,.go-mcp .mcp-main>br,.go-mcp .mcp-main>.clear,.go-mcp>.inner>.clear{display:none}
+.go-mcp .mcp-main{padding:18px 20px}
+div.panel.go-mcp-sub{margin:0 0 16px;padding:0;background:none;border:0}
+.go-mcp-sub>.inner{margin:0;padding:0;overflow:hidden;background:var(--go-surface);border:1px solid var(--go-border);border-radius:12px}
+div.panel.go-mcp-pad>.inner{padding:14px 16px}
+h1.page-title.go-mcp-heading{display:flex;align-items:center;gap:10px;margin:6px 0 12px;padding:0 0 10px;border:0;border-bottom:1px solid var(--go-border);font:700 1.35rem/1.2 var(--go-font-head);letter-spacing:.03em;text-transform:none;color:var(--go-text)}
+h1.page-title.go-mcp-heading::before{content:"";flex:0 0 24px;width:24px;height:24px;background:var(--go-accent);-webkit-mask:var(--ic-shield) center/contain no-repeat;mask:var(--ic-shield) center/contain no-repeat}
+
+/* tables: banner header, one row per topic / user / ip */
+.go-mcp table.table1{width:100%;margin:0;border-collapse:collapse;border:0;background:none}
+.go-mcp table.table1+table.table1{margin-top:14px}
+.go-mcp table.table1 thead tr{background:repeating-linear-gradient(0deg,rgba(255,255,255,.06) 0 2px,transparent 2px 4px),linear-gradient(100deg,var(--go-head-from),var(--go-head-to) 70%,var(--go-accent-2))}
+.go-mcp table.table1 thead th{padding:13px 12px;font:700 .85rem/1.2 var(--go-font-head);letter-spacing:.08em;text-align:center;color:#fff;white-space:nowrap;background:none!important;border:0}
+.go-mcp table.table1 thead th.name{text-align:left}
+.go-mcp table.table1 tbody tr.row1,.go-mcp table.table1 tbody tr.row2{background:none}
+.go-mcp table.table1 tbody tr td{padding:10px 12px;font-size:.88rem;color:var(--go-text);vertical-align:middle;background:none;border:0;border-bottom:1px dashed var(--go-border);transition:background .15s}
+.go-mcp table.table1 tbody tr:last-child td{border-bottom:0}
+.go-mcp table.table1 tbody tr:hover td{background:var(--go-surface-2)}
+.go-mcp td.posts{text-align:center;font:800 1rem/1 var(--go-font-head);color:var(--go-accent)}
+.go-mcp td.go-c-date{color:var(--go-muted);white-space:nowrap}
+.go-mcp td.go-c-act{width:1%;font-size:0;text-align:right;white-space:nowrap}
+.go-mcp td.go-c-act a{display:inline-block;padding:3px 12px;font-size:.82rem;color:var(--go-accent);text-decoration:none;background:var(--go-surface-2);border:1px solid var(--go-border);border-radius:8px 2px 8px 2px;transition:color .2s,background .2s,border-color .2s}
+.go-mcp td.go-c-act a:hover{color:var(--go-on-accent);background:var(--go-accent);border-color:var(--go-accent)}
+.go-mcp td a{color:var(--go-accent)}
+.go-mcp a.topictitle{font:700 1.05rem/1.25 var(--go-font-head);letter-spacing:.02em;color:var(--go-text);text-decoration:none}
+.go-mcp a.topictitle:hover{color:var(--go-accent)}
+.go-mcp .span-tab{margin-top:3px;font-size:.78rem;color:var(--go-muted)}
+.go-mcp .span-tab a:has(.usr_grp_clr){display:inline-block;padding:0 9px;line-height:1.5;text-decoration:none;background:#f3f5fc;border:1px solid var(--go-border);border-radius:999px}
+.go-mcp input[type="checkbox"]{width:18px;height:18px;margin:0;cursor:pointer;accent-color:var(--go-accent)}
+
+/* topic state tile (same glyphs and colours as the topic list) */
+.go-mcp td.icon{--go-ind:var(--go-muted);--go-glyph:"\1F4AC";--go-op:.6;--go-ring:transparent;width:64px;text-align:center;background-image:none!important}
+.go-mcp td.icon[style*="unread"]{--go-ind:var(--go-accent);--go-op:1;--go-ring:var(--go-glow)}
+.go-mcp td.icon[style*="sticky_"]{--go-glyph:"\1F4CC";--go-ind:var(--go-accent-2);--go-op:.85}
+.go-mcp td.icon[style*="announce_"]{--go-glyph:"\1F4E2";--go-ind:#db2777;--go-op:.85}
+.go-mcp td.icon[style*="_hot"]{--go-glyph:"\1F525";--go-ind:#f97316}
+.go-mcp td.icon[style*="_moved"]{--go-glyph:"\21AA"}
+.go-mcp td.icon[style*="_locked"]{--go-ind:var(--go-danger);--go-glyph:"\1F512";--go-op:.9}
+.go-mcp td.icon::before{content:var(--go-glyph);display:flex;align-items:center;justify-content:center;width:40px;height:40px;margin:0 auto;box-sizing:border-box;font-size:1.15rem;line-height:1;background:var(--go-surface-2);border:2px solid var(--go-ind);border-radius:12px 4px 12px 4px;opacity:var(--go-op);box-shadow:0 0 0 3px var(--go-ring)}
+.go-mcp td.icon>img{display:none}
+
+/* mark all / unmark all and the action buttons */
+.go-mcp p.right-box.go-selectall{display:flex;justify-content:flex-end;gap:8px;float:none;margin:0 0 6px;font-size:0}
+.go-selectall a{display:inline-block;padding:3px 12px;font-size:.8rem;color:var(--go-text);text-decoration:none;background:var(--go-surface);border:1px solid var(--go-border);border-radius:8px 2px 8px 2px;transition:color .2s,border-color .2s}
+.go-selectall a:hover{color:var(--go-accent);border-color:var(--go-accent)}
+.go-mcp fieldset.go-actionbar{display:flex;flex-wrap:wrap;gap:8px;float:none;width:auto;margin:14px 0 0;padding:0;font-size:0;border:0;text-align:left}
+.go-actionbar input.button2{padding:9px 16px;font:700 .85rem/1 var(--go-font-head);letter-spacing:.05em;color:var(--go-text);cursor:pointer;background:var(--go-surface-2);border:1px solid var(--go-border);border-radius:10px 2px 10px 2px;transition:color .2s,background .2s,border-color .2s}
+.go-actionbar input.button2:hover{color:var(--go-on-accent);background:var(--go-accent);border-color:var(--go-accent)}
+.go-actionbar input.button2[name="delete"],.go-actionbar input.button2[name="trash"]{color:var(--go-danger);border-color:var(--go-danger)}
+.go-actionbar input.button2[name="delete"]:hover,.go-actionbar input.button2[name="trash"]:hover{color:var(--go-on-accent);background:var(--go-danger);border-color:var(--go-danger)}
+.go-actionbar input.button2[name^="split_type"]{color:var(--go-on-accent);background:linear-gradient(135deg,var(--go-accent),var(--go-accent-2));border:0}
+.go-actionbar input.button2[name^="split_type"]:hover{filter:brightness(1.1)}
+
+/* key / value rows (split form, ip details) */
+.go-mcp fieldset{margin:0;padding:0;border:0}
+.go-mcp fieldset p{margin:0 0 10px;font-size:.88rem;line-height:1.5;color:var(--go-muted)}
+.go-mcp fieldset dl{display:flex;align-items:center;gap:14px;margin:0;padding:10px 0;border-bottom:1px dashed var(--go-border)}
+.go-mcp fieldset dl:last-of-type{border-bottom:0}
+.go-mcp fieldset dl dt{flex:0 0 170px;float:none;width:auto;margin:0;padding:0}
+.go-mcp fieldset dl dt label{font-weight:700;color:var(--go-muted)}
+.go-mcp fieldset dl dd{flex:1;min-width:0;float:none;margin:0;padding:0;color:var(--go-text)}
+.go-mcp input.inputbox{width:100%;max-width:440px;padding:8px 14px;box-sizing:border-box;font:inherit;font-size:.88rem;color:var(--go-text);background:var(--go-surface-2);border:1px solid var(--go-border);border-radius:999px;transition:border-color .2s,box-shadow .2s}
+.go-mcp input.inputbox:focus{outline:0;border-color:var(--go-accent);box-shadow:0 0 0 3px var(--go-glow)}
+.go-mcp select{max-width:100%;padding:7px 10px;font:inherit;font-size:.88rem;color:var(--go-text);background:var(--go-surface-2);border:1px solid var(--go-border);border-radius:8px 2px 8px 2px}
+
+/* topic review (split) */
+.go-mcp #topicreview>br{display:none}
+.go-mcp #topicreview .post{margin:0 0 12px;padding:0;background:var(--go-surface-2)!important;border:1px solid var(--go-border);border-left:4px solid var(--go-accent);border-radius:0 12px 12px 0}
+.go-mcp #topicreview .post .inner{padding:12px 16px;background:none;border:0}
+.go-mcp #topicreview .corners-top,.go-mcp #topicreview .corners-bottom{display:none}
+.go-mcp #topicreview .postbody{float:none;width:auto;margin:0;padding:0}
+.go-mcp #topicreview .postbody h3{margin:0 0 4px;padding:0;border:0;font:700 1.1rem/1.2 var(--go-font-head);text-transform:none;color:var(--go-text)}
+.go-mcp #topicreview .postbody p.author{margin:0;font-size:.78rem;color:var(--go-muted)}
+.go-mcp #topicreview .postbody p.author img{display:none}
+.go-mcp #topicreview .postbody p.right-box{display:flex;align-items:center;gap:6px;float:right;margin:0 0 0 10px;font-size:.8rem;color:var(--go-muted)}
+.go-mcp #topicreview .postbody .content{margin-top:10px;padding-top:10px;font-size:.92rem;line-height:1.65;color:var(--go-text);border-top:1px dashed var(--go-border);overflow-wrap:anywhere}
+
+@media (max-width:760px){
+  .go-mcp .mcp-main{padding:14px}
+  .go-mcp fieldset dl{flex-direction:column;align-items:stretch;gap:6px}
+  .go-mcp fieldset dl dt{flex:0 0 auto}
+}
