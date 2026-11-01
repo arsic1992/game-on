@@ -814,3 +814,17 @@ html{scroll-padding-top:76px}
 #addthis-toolbar .resp-sharing-button--pinterest{--brand:#e60023}
 #addthis-toolbar .resp-sharing-button--chatgpt{--brand:#10a37f}
 #addthis-toolbar .resp-sharing-button--email{--brand:#6b7280}
+
+/* ===== 30. BREADCRUMB (path): arrow segments, the last one is the current place ===== */
+.go-actions .path{display:flex;flex-wrap:wrap;align-items:center;gap:6px 0;font-size:0;filter:drop-shadow(0 0 1px var(--go-border)) drop-shadow(0 2px 5px rgba(0,0,0,.1))}
+.go-actions .path a.nav{position:relative;display:inline-flex;align-items:center;gap:7px;height:32px;margin:0 0 0 -10px;padding:0 22px 0 24px;font:700 .85rem/1 var(--go-font-head);letter-spacing:.04em;color:var(--go-text);text-decoration:none;background:var(--go-surface);clip-path:polygon(0 0,calc(100% - 12px) 0,100% 50%,calc(100% - 12px) 100%,0 100%,12px 50%);transition:color .2s,background .2s}
+.go-actions .path a.nav:first-of-type{margin-left:0;padding-left:16px;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 50%,calc(100% - 12px) 100%,0 100%)}
+.go-actions .path a.nav:first-of-type::before{content:"";width:15px;height:15px;background:currentColor;-webkit-mask:var(--ic-home) center/contain no-repeat;mask:var(--ic-home) center/contain no-repeat}
+.go-actions .path a.nav:hover,.go-actions .path a.nav:focus-visible{outline:0;color:var(--go-accent);background:var(--go-surface-2)}
+.go-actions .path a.nav:last-of-type{color:#fff;background:linear-gradient(100deg,var(--go-head-from),var(--go-head-to))}
+.go-actions .path a.nav:last-of-type:hover{color:#fff;background:linear-gradient(100deg,var(--go-head-from),var(--go-head-to));filter:brightness(1.12)}
+.go-actions .path a.nav:empty{display:none}
+@media (max-width:760px){
+  .go-actions .path a.nav{height:28px;padding:0 18px 0 20px;font-size:.78rem}
+  .go-actions .path a.nav:first-of-type{padding-left:12px}
+}
