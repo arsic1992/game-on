@@ -1054,7 +1054,7 @@ h1.page-title.go-mcp-heading::before{content:"";flex:0 0 24px;width:24px;height:
 #page-header.go-hero div.navbar{display:none!important}
 @media (max-width:760px){#page-header.go-hero{height:260px}}
 
-/* ===== 37. HERO BOTTOM EDGE: soft fade into the page, then a glowing gradient line with a pixel strip ===== */
-#page-header.go-hero{--go-hero-fade:120px;margin:0 0 18px!important}
-#page-header.go-hero::before{content:"";position:absolute;left:0;right:0;bottom:0;height:var(--go-hero-fade);background:linear-gradient(to bottom,transparent,color-mix(in srgb,var(--go-bg) 55%,transparent) 55%,var(--go-bg));pointer-events:none}
-#page-header.go-hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:8px;background:repeating-linear-gradient(90deg,var(--go-new) 0 14px,transparent 14px 18px) top/100% 3px no-repeat,linear-gradient(90deg,var(--go-head-from),var(--go-head-to) 50%,var(--go-accent-2)) bottom/100% 4px no-repeat;box-shadow:0 0 22px var(--go-glow);pointer-events:none}
+/* ===== 37. HERO BOTTOM EDGE: clean gradient line with a soft shadow ===== */
+#page-header.go-hero{margin:0 0 18px!important;box-shadow:0 10px 26px -10px rgba(0,0,0,.55)}
+#page-header.go-hero::before{content:none}
+#page-header.go-hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:linear-gradient(90deg,var(--go-head-from),var(--go-head-to) 50%,var(--go-accent-2));box-shadow:0 0 18px var(--go-glow);pointer-events:none}
