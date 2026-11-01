@@ -828,3 +828,52 @@ html{scroll-padding-top:76px}
   .go-actions .path a.nav{height:28px;padding:0 18px 0 20px;font-size:.78rem}
   .go-actions .path a.nav:first-of-type{padding-left:12px}
 }
+:root{
+  --ic-right:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27black%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpolyline%20points%3D%279%2018%2015%2012%209%206%27%2F%3E%3C%2Fsvg%3E");
+}
+
+/* ===== 31. FAQ (faq_body and faq_dhtml) ===== */
+div.panel.go-faq{margin:0 0 18px;padding:0;background:none;border:0}
+.go-faq .inner{margin:0;padding:0;overflow:hidden;background:var(--go-surface);border:1px solid var(--go-border);border-radius:var(--go-radius);box-shadow:var(--go-shadow)}
+.go-faq .corners-top,.go-faq .corners-bottom{display:none}
+.go-faq dl.faq{margin:0;padding:0}
+.go-faq dl.faq dt.go-faq-title{position:relative;display:flex;align-items:center;gap:12px;margin:0;padding:13px 18px;font:700 1.15rem/1.2 var(--go-font-head);letter-spacing:.06em;color:#fff;background:repeating-linear-gradient(0deg,rgba(255,255,255,.06) 0 2px,transparent 2px 4px),linear-gradient(100deg,var(--go-head-from),var(--go-head-to) 70%,var(--go-accent-2))}
+.go-faq dl.faq dt.go-faq-title::before{content:"";flex:0 0 22px;width:22px;height:22px;background:#fff;-webkit-mask:var(--ic-help) center/contain no-repeat;mask:var(--ic-help) center/contain no-repeat}
+.go-faq dl.faq dt.go-faq-title span{color:inherit}
+
+/* question rows: accordion (faq_dhtml) and link list (faq_body) */
+.go-faq dl.faq dd.go-faq-q,.go-faq dl.faq dd.go-faq-link{position:relative;margin:0;padding:0;background:none;border:0;border-bottom:1px dashed var(--go-border);transition:background .15s}
+.go-faq dl.faq dd.go-faq-q{cursor:pointer}
+.go-faq dl.faq dd.go-faq-q>a,.go-faq dl.faq dd.go-faq-link>a{display:block;padding:12px 46px 12px 18px;font-size:.95rem;line-height:1.4;color:var(--go-text);text-decoration:none;transition:color .15s}
+.go-faq dl.faq dd.go-faq-q::after,.go-faq dl.faq dd.go-faq-link::after{content:"";position:absolute;right:16px;top:50%;width:16px;height:16px;margin-top:-8px;background:var(--go-muted);-webkit-mask:var(--ic-down) center/contain no-repeat;mask:var(--ic-down) center/contain no-repeat;transition:transform .2s,background .2s}
+.go-faq dl.faq dd.go-faq-link::after{-webkit-mask-image:var(--ic-right);mask-image:var(--ic-right)}
+.go-faq dl.faq dd.go-faq-q:hover,.go-faq dl.faq dd.go-faq-link:hover{background:var(--go-surface-2)}
+.go-faq dl.faq dd.go-faq-q:hover>a,.go-faq dl.faq dd.go-faq-link:hover>a{color:var(--go-accent)}
+.go-faq dl.faq dd.go-faq-q:hover::after,.go-faq dl.faq dd.go-faq-link:hover::after{background:var(--go-accent)}
+.go-faq dl.faq dd.go-faq-q:has(+ dd.go-faq-a:not([style*="none"])){background:var(--go-surface-2);box-shadow:inset 4px 0 0 var(--go-accent)}
+.go-faq dl.faq dd.go-faq-q:has(+ dd.go-faq-a:not([style*="none"]))>a{color:var(--go-accent)}
+.go-faq dl.faq dd.go-faq-q:has(+ dd.go-faq-a:not([style*="none"]))::after{background:var(--go-accent);transform:rotate(180deg)}
+
+/* answers: shown by the page script (the display style is left alone on purpose) */
+.go-faq dl.faq dd.go-faq-a{margin:0;padding:0;background:none;border:0}
+.go-faq dl.faq dd.go-faq-a>p{margin:0;padding:14px 18px 16px;font-size:.9rem;line-height:1.7;color:var(--go-text);background:var(--go-surface-2);border:0;border-bottom:1px dashed var(--go-border);border-left:4px solid var(--go-accent)}
+.go-faq dl.faq dd.go-faq-a b,.go-faq dl.faq dd.go-faq-ans b{color:var(--go-accent)}
+.go-faq dl.faq dd.go-faq-a a,.go-faq dl.faq dd.go-faq-ans a{color:var(--go-accent)}
+
+/* faq_body: answer blocks */
+.go-faq .content{padding:18px 20px}
+h1.page-title.go-faq-heading{display:flex;align-items:center;gap:10px;margin:0 0 16px;padding:0 0 12px;border:0;border-bottom:1px solid var(--go-border);font:700 1.5rem/1.2 var(--go-font-head);letter-spacing:.03em;text-transform:none;color:var(--go-text)}
+h1.page-title.go-faq-heading::before{content:"";flex:0 0 26px;width:26px;height:26px;background:var(--go-accent);-webkit-mask:var(--ic-help) center/contain no-repeat;mask:var(--ic-help) center/contain no-repeat}
+.go-faq .content dl.faq{margin:0}
+.go-faq .content dl.faq dt{margin:0;padding:0 0 8px;font:700 1.15rem/1.3 var(--go-font-head);letter-spacing:.02em;color:var(--go-accent)}
+.go-faq .content dl.faq dt b{font-weight:inherit}
+.go-faq dl.faq dd.go-faq-ans{margin:0;padding:12px 16px;font-size:.92rem;line-height:1.7;color:var(--go-text);background:var(--go-surface-2);border:0;border-left:4px solid var(--go-accent);border-radius:0 10px 10px 0}
+.go-faq dl.faq dd.go-faq-top{margin:10px 0 0;padding:0;border:0;background:none}
+.go-faq dd.go-faq-top a{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;font-size:.78rem;color:var(--go-muted);text-decoration:none;background:var(--go-surface);border:1px solid var(--go-border);border-radius:8px 2px 8px 2px;transition:color .2s,border-color .2s}
+.go-faq dd.go-faq-top a img{display:none}
+.go-faq dd.go-faq-top a::before{content:"";width:14px;height:14px;background:currentColor;-webkit-mask:var(--ic-up) center/contain no-repeat;mask:var(--ic-up) center/contain no-repeat}
+.go-faq dd.go-faq-top a:hover{color:var(--go-accent);border-color:var(--go-accent)}
+.go-faq hr.dashed{height:0;margin:18px 0;background:none;border:0;border-top:1px dashed var(--go-border)}
+
+/* jump-to form (shared by FAQ pages) */
+.go-formbar p.right{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:8px;float:none;margin:0;font-size:.84rem;color:var(--go-muted);text-align:left}
