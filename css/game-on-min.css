@@ -1015,3 +1015,25 @@ h1.page-title.go-mcp-heading::before{content:"";flex:0 0 24px;width:24px;height:
   .go-mcp fieldset dl{flex-direction:column;align-items:stretch;gap:6px}
   .go-mcp fieldset dl dt{flex:0 0 auto}
 }
+
+/* ===== 34. MODERATOR PANELS: the forum styles these pages through #cp-main, so these rules match that strength ===== */
+#cp-main span.corners-top,#cp-main span.corners-bottom,#cp-main span.corners-top span,#cp-main span.corners-bottom span{display:none!important;background:none!important}
+#cp-main div.panel.go-mcp-sub{background:none!important;border:0!important}
+#cp-main .go-mcp-sub>.inner{background:var(--go-surface)!important;border:1px solid var(--go-border)!important;border-radius:12px}
+#cp-main table.table1{width:100%;border:0!important;border-collapse:collapse;background:none!important}
+#cp-main table.table1 thead th{color:#fff!important;background:none!important;border:0!important;text-shadow:none!important}
+#cp-main table.table1 tbody tr.row1,#cp-main table.table1 tbody tr.row2{background:none!important}
+#cp-main table.table1 tbody td{color:var(--go-text)!important;background:none!important;border:0!important;border-bottom:1px dashed var(--go-border)!important;font-size:.88rem}
+#cp-main table.table1 tbody tr:last-child td{border-bottom:0!important}
+#cp-main table.table1 tbody tr:hover td{background:var(--go-surface-2)!important}
+#cp-main table.table1 td.posts{color:var(--go-accent)!important}
+#cp-main table.table1 td.go-c-date{color:var(--go-muted)!important}
+#cp-main table.table1 td.go-c-act{font-size:0!important}
+#cp-main table.table1 td.go-c-act a{font-size:.82rem!important;color:var(--go-accent)!important}
+#cp-main table.table1 td.go-c-act a:hover{color:var(--go-on-accent)!important}
+#cp-main a.topictitle{color:var(--go-text)!important}
+#cp-main a.topictitle:hover{color:var(--go-accent)!important}
+#cp-main fieldset dl{border-bottom:1px dashed var(--go-border)!important}
+#cp-main fieldset dl:last-of-type{border-bottom:0!important}
+#cp-main fieldset dl dt label{color:var(--go-muted)!important}
+#cp-main fieldset dl dd{color:var(--go-text)!important}
