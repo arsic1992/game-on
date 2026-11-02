@@ -1126,3 +1126,7 @@ p.go-warn strong{font-weight:600}
   .go-kv dl{flex-direction:column;gap:6px}
   .go-kv dl dt{flex:0 0 auto}
 }
+
+/* ===== 39. FORM ROW HOVER: the forum turns a row's label black on hover, which is unreadable in dark mode ===== */
+.go-kv dl:hover dt label,.go-mcp fieldset dl:hover dt label,#phpbb fieldset dl:hover dt label{color:var(--go-text)!important}
+.go-kv dl:hover dd label,.go-mcp fieldset dl:hover dd label,#phpbb fieldset dl:hover dd label{color:var(--go-text)!important}
