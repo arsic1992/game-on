@@ -1130,3 +1130,61 @@ p.go-warn strong{font-weight:600}
 /* ===== 39. FORM ROW HOVER: the forum turns a row's label black on hover, which is unreadable in dark mode ===== */
 .go-kv dl:hover dt label,.go-mcp fieldset dl:hover dt label,#phpbb fieldset dl:hover dt label{color:var(--go-text)!important}
 .go-kv dl:hover dd label,.go-mcp fieldset dl:hover dd label,#phpbb fieldset dl:hover dd label{color:var(--go-text)!important}
+
+/* ===== 40. MERGE, MOVE AND REPORT PANELS (merge_body, merge_select_body, modcp_move, report_list_body, report_view_body, report_popup_body) ===== */
+div.panel.go-mcp.go-mcp-pad>.inner{padding:18px 20px}
+.go-mcp-sub .corners-top,.go-mcp-sub .corners-bottom{display:none}
+.go-mcp-pad>.inner>fieldset.go-actionbar:first-of-type{margin-top:0}
+.go-mcp-pad>.inner>h1.page-title.go-mcp-heading{margin-top:0}
+
+/* label with a small explanation under it */
+.go-mcp fieldset dl dt br{display:none}
+.go-mcp fieldset dl dt .italic{display:block;margin-top:2px;font-size:.78rem;font-style:italic;font-weight:400;color:var(--go-muted)}
+.go-mcp fieldset.fields3 dl dt{flex-basis:260px}
+.go-mcp fieldset dl dd strong{color:var(--go-text)}
+
+/* action buttons that are not tied to a table */
+fieldset.go-actionbar{display:flex;flex-wrap:wrap;gap:8px;float:none;width:auto;margin:14px 0 0;padding:0;font-size:0;border:0;text-align:left}
+.go-actionbar input.button2[name="submit"],.go-actionbar input.button2[name="confirm"],.go-actionbar input.button2[name="go"]{color:var(--go-on-accent);background:linear-gradient(135deg,var(--go-accent),var(--go-accent-2));border:0}
+.go-actionbar input.button2[name="submit"]:hover,.go-actionbar input.button2[name="confirm"]:hover,.go-actionbar input.button2[name="go"]:hover{filter:brightness(1.1)}
+.go-actionbar input.button2[name="mode[delete]"]{color:var(--go-danger);border-color:var(--go-danger)}
+.go-actionbar input.button2[name="mode[delete]"]:hover{color:var(--go-on-accent);background:var(--go-danger);border-color:var(--go-danger)}
+
+/* confirmation text and buttons (modcp_move) */
+p.go-confirm{margin:16px 0 0;font-size:.92rem;line-height:1.6;text-align:center;color:var(--go-text)}
+.go-confirm input.button2{margin:8px 4px 0;padding:10px 26px;font:700 .9rem/1 var(--go-font-head);letter-spacing:.05em;color:var(--go-text);cursor:pointer;background:var(--go-surface-2);border:1px solid var(--go-border);border-radius:10px 2px 10px 2px;transition:color .2s,background .2s,border-color .2s}
+.go-confirm input.button2:hover{color:var(--go-on-accent);background:var(--go-accent);border-color:var(--go-accent)}
+.go-confirm input.button2[name="confirm"]{color:var(--go-on-accent);background:linear-gradient(135deg,var(--go-accent),var(--go-accent-2));border:0}
+.go-confirm input.button2[name="confirm"]:hover{filter:brightness(1.1)}
+
+/* alert line (reports marked) */
+p.go-alert{position:relative;margin:0 0 14px;padding:11px 16px 11px 48px;font-size:.9rem;line-height:1.5;text-align:left!important;color:var(--go-danger)!important;background:var(--go-surface);border:1px solid var(--go-border);border-left:4px solid var(--go-danger);border-radius:0 12px 12px 0}
+p.go-alert::before{content:"";position:absolute;left:18px;top:50%;width:20px;height:20px;margin-top:-10px;background:var(--go-danger);-webkit-mask:var(--ic-alert) center/contain no-repeat;mask:var(--ic-alert) center/contain no-repeat}
+p.go-alert:empty{display:none}
+
+/* rows of selects and buttons (sorting, marking, forum picker with pagination) */
+.go-orderbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:8px 10px;float:none!important;width:auto!important;margin:0 0 12px;font-size:.84rem;color:var(--go-muted)}
+.go-orderbar.go-mergebar{justify-content:flex-start;padding:10px 14px;background:var(--go-surface);border:1px solid var(--go-border);border-radius:var(--go-radius);box-shadow:var(--go-shadow)}
+.go-orderbar br{display:none}
+.go-orderbar select{max-width:240px;padding:7px 10px;font:inherit;font-size:.85rem;color:var(--go-text);background:var(--go-surface-2);border:1px solid var(--go-border);border-radius:8px 2px 8px 2px}
+.go-orderbar input.button2{padding:8px 16px;font:700 .85rem/1 var(--go-font-head);letter-spacing:.05em;color:var(--go-text);cursor:pointer;background:var(--go-surface);border:1px solid var(--go-border);border-radius:8px 2px 8px 2px;transition:color .2s,background .2s,border-color .2s}
+.go-orderbar input.button2:hover{color:var(--go-on-accent);background:var(--go-accent);border-color:var(--go-accent)}
+.go-orderbar a{display:inline-block;padding:3px 10px;color:var(--go-text);text-decoration:none;background:var(--go-surface);border:1px solid var(--go-border);border-radius:8px 2px 8px 2px;transition:color .2s,border-color .2s}
+.go-orderbar a:hover{color:var(--go-accent);border-color:var(--go-accent)}
+
+/* report pages: breadcrumb arrows, side details, inline status form */
+.go-actions .path img{display:none}
+#cp-main td.go-c-side{width:230px;vertical-align:top;font-size:.86rem;line-height:1.7;color:var(--go-muted)!important;background:var(--go-surface-2)!important;border-right:1px solid var(--go-border)!important}
+.go-mcp td.alignv p{margin:0;font-size:.92rem;line-height:1.65;color:var(--go-text)}
+.go-mcp hr.dashed{height:0;margin:12px 0;background:none;border:0;border-top:1px dashed var(--go-border)}
+p.go-inlineform{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 10px}
+.go-inlineform select{max-width:240px;padding:7px 10px;font:inherit;font-size:.85rem;color:var(--go-text);background:var(--go-surface-2);border:1px solid var(--go-border);border-radius:8px 2px 8px 2px}
+.go-inlineform input.button2{padding:8px 16px;font:700 .85rem/1 var(--go-font-head);letter-spacing:.05em;color:var(--go-on-accent);cursor:pointer;background:linear-gradient(135deg,var(--go-accent),var(--go-accent-2));border:0;border-radius:8px 2px 8px 2px;transition:filter .2s}
+.go-inlineform input.button2:hover{filter:brightness(1.1)}
+
+/* report popup window */
+#simple-wrap{max-width:520px;margin:0 auto;padding:16px}
+#simple-wrap p.center{margin:0;font-size:.95rem;line-height:1.6;color:var(--go-text)}
+p.go-popbtn{display:flex;justify-content:center;float:none!important;margin:0}
+.go-popbtn a{display:inline-block;padding:10px 26px;font:700 .9rem/1 var(--go-font-head);letter-spacing:.05em;color:var(--go-on-accent);text-decoration:none;background:linear-gradient(135deg,var(--go-accent),var(--go-accent-2));border-radius:10px 2px 10px 2px;transition:filter .2s}
+.go-popbtn a:hover{filter:brightness(1.1)}
