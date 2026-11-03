@@ -1188,3 +1188,61 @@ p.go-inlineform{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 
 p.go-popbtn{display:flex;justify-content:center;float:none!important;margin:0}
 .go-popbtn a{display:inline-block;padding:10px 26px;font:700 .9rem/1 var(--go-font-head);letter-spacing:.05em;color:var(--go-on-accent);text-decoration:none;background:linear-gradient(135deg,var(--go-accent),var(--go-accent-2));border-radius:10px 2px 10px 2px;transition:filter .2s}
 .go-popbtn a:hover{filter:brightness(1.1)}
+:root{
+  --ic-inbox:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27black%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpolyline%20points%3D%2722%2012%2016%2012%2014%2015%2010%2015%208%2012%202%2012%27%2F%3E%3Cpath%20d%3D%27M5.45%205.11L2%2012v6a2%202%200%200%200%202%202h16a2%202%200%200%200%202-2v-6l-3.45-6.89A2%202%200%200%200%2016.76%204H7.24a2%202%200%200%200-1.79%201.11z%27%2F%3E%3C%2Fsvg%3E");
+  --ic-send:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27black%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cline%20x1%3D%2722%27%20y1%3D%272%27%20x2%3D%2711%27%20y2%3D%2713%27%2F%3E%3Cpolygon%20points%3D%2722%202%2015%2022%2011%2013%202%209%2022%202%27%2F%3E%3C%2Fsvg%3E");
+  --ic-upload:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27black%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%27M21%2015v4a2%202%200%200%201-2%202H5a2%202%200%200%201-2-2v-4%27%2F%3E%3Cpolyline%20points%3D%2717%208%2012%203%207%208%27%2F%3E%3Cline%20x1%3D%2712%27%20y1%3D%273%27%20x2%3D%2712%27%20y2%3D%2715%27%2F%3E%3C%2Fsvg%3E");
+  --ic-save:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27black%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%27M19%2021H5a2%202%200%200%201-2-2V5a2%202%200%200%201%202-2h11l5%205v11a2%202%200%200%201-2%202z%27%2F%3E%3Cpolyline%20points%3D%2717%2021%2017%2013%207%2013%207%2021%27%2F%3E%3Cpolyline%20points%3D%277%203%207%208%2015%208%27%2F%3E%3C%2Fsvg%3E");
+}
+
+/* ===== 41. PRIVATE MESSAGES (privmsgs_body) ===== */
+#privmsgs-menu{display:flex;flex-wrap:wrap;gap:8px;float:none;width:auto;margin:0 0 16px;padding:0;list-style:none;background:none;border:0}
+#privmsgs-menu li{position:relative;display:inline-flex;align-items:center;gap:8px;float:none;height:40px;margin:0;padding:0 18px;box-sizing:border-box;font:700 .92rem/1 var(--go-font-head);letter-spacing:.05em;color:var(--go-muted);background:var(--go-surface);border:1px solid var(--go-border);border-radius:10px 2px 10px 2px;transition:color .2s,border-color .2s,box-shadow .2s}
+#privmsgs-menu li img{display:none}
+#privmsgs-menu li::before{content:"";flex:0 0 18px;width:18px;height:18px;background:currentColor;-webkit-mask:var(--ic,var(--ic-inbox)) center/contain no-repeat;mask:var(--ic,var(--ic-inbox)) center/contain no-repeat}
+#privmsgs-menu li a{color:inherit;text-decoration:none}
+#privmsgs-menu li a::after{content:"";position:absolute;inset:0}
+#privmsgs-menu li:hover{color:var(--go-accent);border-color:var(--go-accent);box-shadow:0 0 0 3px var(--go-glow)}
+#privmsgs-menu li:not(:has(a)){color:var(--go-on-accent);background:linear-gradient(135deg,var(--go-accent),var(--go-accent-2));border-color:transparent}
+#privmsgs-menu li:not(:has(a)):hover{color:var(--go-on-accent);box-shadow:none}
+#privmsgs-menu li.go-pm-inbox{--ic:var(--ic-inbox)}
+#privmsgs-menu li.go-pm-sent{--ic:var(--ic-send)}
+#privmsgs-menu li.go-pm-out{--ic:var(--ic-upload)}
+#privmsgs-menu li.go-pm-save{--ic:var(--ic-save)}
+
+/* display-messages bar */
+div.panel.go-pmbar{margin:0 0 16px;padding:0;background:none;border:0}
+.go-pmbar>.inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px;margin:0;padding:12px 16px;background:var(--go-surface);border:1px solid var(--go-border);border-radius:var(--go-radius);box-shadow:var(--go-shadow)}
+.go-pmbar .corners-top,.go-pmbar .corners-bottom,.go-pmbar .clear{display:none}
+.go-pmbar p.left-box,.go-pmbar p.right-box{display:flex;flex-wrap:wrap;align-items:center;gap:8px;float:none;margin:0;font-size:.85rem;color:var(--go-muted)}
+.go-pmbar select{max-width:220px;padding:7px 10px;font:inherit;font-size:.85rem;color:var(--go-text);background:var(--go-surface-2);border:1px solid var(--go-border);border-radius:8px 2px 8px 2px}
+.go-pmbar input.button2{padding:8px 16px;font:700 .85rem/1 var(--go-font-head);letter-spacing:.05em;color:var(--go-on-accent);cursor:pointer;background:linear-gradient(135deg,var(--go-accent),var(--go-accent-2));border:0;border-radius:8px 2px 8px 2px;transition:filter .2s}
+.go-pmbar input.button2:hover{filter:brightness(1.1)}
+
+/* message list: same card, banner and state tile as the topic list */
+.go-pm li.header dd.mark{display:block!important;margin-left:auto;font:700 .85rem/1 var(--go-font-head);letter-spacing:.08em;color:#fff}
+.go-pm .go-pm-icon{display:none}
+.go-pm .go-topic-row{--go-glyph:"\2709"}
+.go-pm dl.go-pm-row dt{order:1;flex:1 1 0;min-width:0;float:none;width:auto;margin:0;padding:0}
+.go-pm dl.go-pm-row dt>br{display:none}
+.go-pm dl.go-pm-row dt span{display:block;margin:2px 0 0!important;font-size:.78rem;color:var(--go-muted)}
+.go-pm dl.go-pm-row dt em{font-style:normal}
+.go-pm dl.go-pm-row dt a:has(.usr_grp_clr){display:inline-block;padding:0 9px;line-height:1.5;text-decoration:none;background:#f3f5fc;border:1px solid var(--go-border);border-radius:999px}
+.go-pm dl.go-pm-row dd.mark{order:2;flex:0 0 auto;float:none;width:auto;margin:0;padding:0;border:0;background:none}
+.go-pm input[type="checkbox"]{width:18px;height:18px;margin:0;cursor:pointer;accent-color:var(--go-accent)}
+.go-pm li.row.go-empty dd{display:none}
+
+/* mark all / unmark all, page number, action buttons */
+p.right-box.go-selectall{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:10px;float:none;margin:10px 0 8px!important;font-size:0}
+p.right-box.go-selectall a{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:0 20px;box-sizing:border-box;font:700 .9rem/1 var(--go-font-head);letter-spacing:.05em;color:var(--go-text);text-decoration:none;white-space:nowrap;background:var(--go-surface);border:1px solid var(--go-border);border-radius:10px 2px 10px 2px;transition:color .2s,background .2s,border-color .2s}
+p.right-box.go-selectall a:hover{color:var(--go-on-accent);background:var(--go-accent);border-color:var(--go-accent)}
+p.go-pmpage{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;margin:0 0 12px;font-size:.82rem;color:var(--go-muted)}
+p.go-pmpage .go-pagination{margin:0;text-align:left}
+.go-actions .go-pmactions{flex:1 1 auto;float:none;width:auto;margin:0;padding:0}
+.go-pmactions p{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px;margin:0;font-size:0}
+.go-pmactions input.button1,.go-pmactions input.button2{padding:9px 16px;font:700 .85rem/1 var(--go-font-head);letter-spacing:.05em;color:var(--go-text);cursor:pointer;background:var(--go-surface-2);border:1px solid var(--go-border);border-radius:10px 2px 10px 2px;transition:color .2s,background .2s,border-color .2s}
+.go-pmactions input.button1,.go-pmactions input.button2[name="mark_as_read"]{color:var(--go-on-accent);background:linear-gradient(135deg,var(--go-accent),var(--go-accent-2));border:0}
+.go-pmactions input.button1:hover{filter:brightness(1.1)}
+.go-pmactions input.button2:hover{color:var(--go-on-accent);background:var(--go-accent);border-color:var(--go-accent)}
+.go-pmactions input.button2[name="delete"],.go-pmactions input.button2[name="deleteall"]{color:var(--go-danger);border-color:var(--go-danger)}
+.go-pmactions input.button2[name="delete"]:hover,.go-pmactions input.button2[name="deleteall"]:hover{color:var(--go-on-accent);background:var(--go-danger);border-color:var(--go-danger)}
