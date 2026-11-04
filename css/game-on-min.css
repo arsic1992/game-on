@@ -1274,3 +1274,41 @@ div.go-contact{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin
 #simple-wrap .go-groups .inner{padding:18px}
 #simple-wrap .go-groups .inner>br{display:none}
 #simple-wrap .go-groups .inner>p:not(.right-box){margin:0 0 14px;font-size:.95rem;line-height:1.6;text-align:center;color:var(--go-text)}
+
+/* ===== 43. TOPIC REVIEW BOXES (privmsg_topic_review, posting_topic_review) AND POSTING CONFIRM CODE ===== */
+h2.go-review-title,div.h3.go-review-title{display:flex;align-items:center;gap:10px;margin:0 0 12px;padding:0 0 10px;border:0;border-bottom:1px solid var(--go-border);font:700 1.3rem/1.2 var(--go-font-head);letter-spacing:.03em;text-transform:none;color:var(--go-text);background:none}
+h2.go-review-title::before,div.h3.go-review-title::before{content:"";flex:0 0 24px;width:24px;height:24px;background:var(--go-accent);-webkit-mask:var(--ic-filetext) center/contain no-repeat;mask:var(--ic-filetext) center/contain no-repeat}
+div.panel.go-review{margin:0 0 12px;padding:0;background:none;border:0}
+.go-review>.inner{display:grid;grid-template-columns:150px minmax(0,1fr);margin:0;padding:0;overflow:hidden;background:var(--go-surface);border:1px solid var(--go-border);border-left:4px solid var(--go-accent);border-radius:0 12px 12px 0}
+.go-review>.inner:not(:has(.postprofile)){grid-template-columns:minmax(0,1fr)}
+.go-review[class*="current"]>.inner{border-left-color:var(--go-accent-2);box-shadow:0 0 0 3px var(--go-glow)}
+.go-review .corners-top,.go-review .corners-bottom,.go-review>.inner>.clear{display:none}
+.go-review .go-review-side{grid-column:1;grid-row:1;min-width:0}
+.go-review .postprofile{float:none;width:auto;margin:0;padding:14px 10px;height:100%;box-sizing:border-box;text-align:center;background:var(--go-surface-2);border:0;border-right:1px dashed var(--go-border)}
+.go-review .postprofile dt{display:flex;flex-direction:column;align-items:center;gap:6px;float:none;width:auto;margin:0;padding:0;font-size:.82rem}
+.go-review .postprofile dt>br{display:none}
+.go-review .go-avatar{width:64px;height:64px}
+.go-review .postprofile dt a:has(.usr_grp_clr){display:inline-block;padding:0 10px;line-height:1.5;text-decoration:none;background:#f3f5fc;border:1px solid var(--go-border);border-radius:999px}
+.go-review .postbody{grid-column:2;grid-row:1;float:none;width:auto;min-width:0;margin:0;padding:14px 18px}
+.go-review>.inner:not(:has(.postprofile)) .postbody{grid-column:1}
+.go-review .postbody .h3,.go-review .postbody h3{margin:0 0 4px;padding:0;border:0;font:700 1.15rem/1.25 var(--go-font-head);letter-spacing:.02em;text-transform:none;color:var(--go-text);background:none}
+.go-review .postbody p.author{margin:0;font-size:.78rem;color:var(--go-muted)}
+.go-review .postbody p.author img{display:none}
+.go-review .postbody p.author a:has(.usr_grp_clr){display:inline-block;padding:0 9px;line-height:1.5;text-decoration:none;background:#f3f5fc;border:1px solid var(--go-border);border-radius:999px}
+.go-review .postbody .content{margin-top:10px;padding-top:10px;font-size:.92rem;line-height:1.65;color:var(--go-text);border-top:1px dashed var(--go-border);overflow-wrap:anywhere}
+div.post.go-review-hidden{margin:0 0 12px;padding:0;color:var(--go-muted);background:none!important;border:1px dashed var(--go-border);border-radius:12px}
+.go-review-hidden .inner{padding:10px 14px;background:none}
+.go-review-hidden .corners-top,.go-review-hidden .corners-bottom{display:none}
+@media (max-width:760px){
+  .go-review>.inner{grid-template-columns:minmax(0,1fr)}
+  .go-review .go-review-side,.go-review .postbody{grid-column:1;grid-row:auto}
+  .go-review .postprofile{border-right:0;border-bottom:1px dashed var(--go-border)}
+}
+
+/* posting confirm code */
+form.go-confirmcode{margin:0 0 18px;padding:18px 20px;background:var(--go-surface);border:1px solid var(--go-border);border-radius:var(--go-radius);box-shadow:var(--go-shadow)}
+form.go-confirmcode p{margin:0 0 12px;font-size:.92rem;line-height:1.6;color:var(--go-text)}
+form.go-confirmcode p:has(>input[type="hidden"]){display:none}
+form.go-confirmcode p strong{color:var(--go-accent)}
+form.go-confirmcode input.button2{padding:10px 24px;font:700 .9rem/1 var(--go-font-head);letter-spacing:.05em;color:var(--go-on-accent);cursor:pointer;background:linear-gradient(135deg,var(--go-accent),var(--go-accent-2));border:0;border-radius:10px 2px 10px 2px;transition:filter .2s}
+form.go-confirmcode input.button2:hover{filter:brightness(1.1)}
