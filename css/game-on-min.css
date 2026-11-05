@@ -1284,7 +1284,7 @@ div.panel.go-review{margin:0 0 12px;padding:0;background:none;border:0}
 .go-review[class*="current"]>.inner{border-left-color:var(--go-accent-2);box-shadow:0 0 0 3px var(--go-glow)}
 .go-review .corners-top,.go-review .corners-bottom,.go-review>.inner>.clear{display:none}
 .go-review .go-review-side{grid-column:1;grid-row:1;min-width:0}
-.go-review .postprofile{float:none;width:auto;margin:0;padding:14px 10px;height:100%;box-sizing:border-box;text-align:center;background:var(--go-surface-2);border:0;border-right:1px dashed var(--go-border)}
+.go-review .postprofile{float:none;width:auto;margin:0;padding:0!important;height:100%;box-sizing:border-box;text-align:center;background:var(--go-surface-2);border:0;border-right:1px dashed var(--go-border)}
 .go-review .postprofile dt{display:flex;flex-direction:column;align-items:center;gap:6px;float:none;width:auto;margin:0;padding:0;font-size:.82rem}
 .go-review .postprofile dt>br{display:none}
 .go-review .go-avatar{width:64px;height:64px}
@@ -1312,3 +1312,16 @@ form.go-confirmcode p:has(>input[type="hidden"]){display:none}
 form.go-confirmcode p strong{color:var(--go-accent)}
 form.go-confirmcode input.button2{padding:10px 24px;font:700 .9rem/1 var(--go-font-head);letter-spacing:.05em;color:var(--go-on-accent);cursor:pointer;background:linear-gradient(135deg,var(--go-accent),var(--go-accent-2));border:0;border-radius:10px 2px 10px 2px;transition:filter .2s}
 form.go-confirmcode input.button2:hover{filter:brightness(1.1)}
+
+/* ===== 44. CONTACT ICONS: pick the icon from the original image too (private messages use mailto: links and no classes) ===== */
+.go-contact a:has(img[src*="icon_user_profile"]){--ic:var(--ic-user)}
+.go-contact a[href^="mailto:"],.go-contact a:has(img[src*="icon_contact_email"]){--ic:var(--ic-mail)}
+.go-contact a:has(img[src*="icon_contact_pm"]){--ic:var(--ic-chat)}
+.go-contact a:has(img[src*="icon_contact_www"]),.go-contact a[target="_userwww"]{--ic:var(--ic-globe)}
+.go-contact a:has(img[src*="icon_contact_fb"]){--ic:var(--ic-fb)}
+.go-contact a:has(img[src*="icon_contact_twitter"]){--ic:var(--ic-tw)}
+.go-contact a:has(img[src*="icon_contact_pinterest"]){--ic:var(--ic-pin)}
+.go-contact a:has(img[src*="icon_contact_skype"]){--ic:var(--ic-phone)}
+.go-members td.go-c-icon a:has(img[src*="icon_contact_pm"]){--ic:var(--ic-chat)}
+.go-members td.go-c-icon a:has(img[src*="icon_contact_email"]){--ic:var(--ic-mail)}
+.go-members td.go-c-icon a:has(img[src*="icon_contact_www"]){--ic:var(--ic-globe)}
